@@ -6,16 +6,16 @@ public class Lab2 {
 
         int batteries=0;
         double minutesPerCharge=0;
-        double costToRecharge;
+        double costToRecharge=0;
 
         boolean done1= false;
         boolean done2= false;
         boolean done3= false;
 
-        double minutesABattery;
+        double totalMinutes;
         double totalCost;
         double costPerHour;
-        double totalHours;
+        double batteriesPerHours;
 
         do{
             System.out.println("Enter number of battries.");
@@ -69,12 +69,13 @@ public class Lab2 {
             }
         }while(!done3);
 
-        minutesABattery=minutesPerCharge*batteries;
-//SOMETHING BAD WITH MATH not sure what
-        totalCost=batteries*minutesPerCharge;
-        totalHours=minutesABattery/60;
-        costPerHour= totalHours/totalCost;
+        totalMinutes=minutesPerCharge*batteries;
+        batteriesPerHours=60/minutesPerCharge;
+        costPerHour=batteriesPerHours*costToRecharge;
+
 //wrong here
+
+        //Then try 5 charges, 4.25 minutes per charge, and $3.50 per charge
 
         /* figure math out to
 
@@ -90,7 +91,7 @@ Test your program:
 Try a word, a negative charge count, and zero for each field that requires a positive number.
 Then try 5 charges, 4.25 minutes per charge, and $3.50 per charge. The results should be 21.25 minutes and $49.41 per hour.
 */
-        System.out.println("The cost to recharge is " +minutesABattery);
+        System.out.println("The total avalible minutes " +totalMinutes);
         System.out.println("The cost per hours is $" +costPerHour);
     }
 }

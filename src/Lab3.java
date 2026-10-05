@@ -48,10 +48,10 @@ public class Lab3 {
         } while (!done);
 
         hypotus= Math.hypot(width, length);
-        area= length*width;
+        area= (length*width)/2;
         perm= (2*width)+(2*length);
 
-        System.out.printf("%-5s %10.2f%n", "Area ", area, "m2"):
+        System.out.printf("%-5s %10.2f%n", "Area ", area, "m2");
         System.out.printf("%-5s %10.2f%n", "perimeter", perm, "m");
         System.out.printf("%-5s %10.2f%n", "straight-line distance", hypotus, "m");
         //+ area+"m2, perimeter "+perm+ "m straight-line distance"+ hypotus+"m");
